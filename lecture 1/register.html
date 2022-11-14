@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>RegisterForm</h1>
+    <p>Pleas fill out form values!</p>
+
+    <form action="">
+        <fieldset>
+            <legend>User info</legend>
+            <label for="login"><input type="text" id="login"> Login </label><br>
+            <br>
+            <label for="pass"><input type="password" id="pass"> Password </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <label for="male"><input type="radio" id="male" name="Gender">Male</label><br>
+            <label for="famele"><input type="radio" id="famele" name="Gender">Female</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>City</legend>
+            <select name="city" id="">
+                <option value="astana">Astana</option>
+                <option value="almaty">Almaty</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>files upload</legend>
+            <input type="file">
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,12 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Ресторан Kruger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #f0f0f0;
+        }
 
+        a {
+            color: #f0f0f0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav li {
+            margin-right: 1rem;
+        }
+
+        section {
+            padding: 1rem;
+        }
+
+        footer {
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function loadMenu() {
+            const menuList = document.getElementById("menu-list");
+            const menuItems = [
+                { category: "Закуски", items: [
+                    { name: "Салат Кругер с креветками, авокадо и манго", price: 490 },
+                    { name: "Тартар из лосося с авокадо и соусом понзу", price: 450 },
+                    { name: "Карпаччо из говядины с рукколой и сыром пармезан", price: 410 }]
+                },
+                { category: "Супы", items: [
+                    { name: "Томатный суп с креветками и базиликом", price: 290 },
+                    { name: "Крем-суп из шампиньонов с трюфельным маслом", price: 320 },
+                    { name: "Уха из трех видов рыбы", price: 350 }]
+                },
+                // Добавьте остальные категории меню согласно вашему усмотрению
+            ];
+
+            for (const category of menuItems) {
+                const categoryElem = document.createElement("h3");
+                categoryElem.textContent = category.category;
+                menuList.appendChild(categoryElem);
+
+                const itemList = document.createElement("ul");
+                for (const item of category.items) {
+                    const itemElem = document.createElement("li");
+                    itemElem.textContent = `${item.name} – ${item.price} руб.`;
+                    itemList.appendChild(itemElem);
+                }
+                menuList.appendChild(itemList);
+            }
+        }
+    </script>
+</head>
+
+<body onload="loadMenu()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#booking">Бронирование</a></li>
+            </ul>
+        </nav>
+        <img src="logo.png" alt="Логотип ресторана Kruger" id="logo">
+    </header>
+    <!-- Здесь будет код HTML для разделов страницы: Главная, Меню, О нас, Контакты и Бронирование -->
+    <footer>
+        <p>&copy; 2023 Ресторан Kruger. Все права защищены.</p>
+    </footer>
 </body>
+
 </html>
